@@ -303,7 +303,12 @@ MobileMeasure = OpenLayers.Class(OpenLayers.Control, {
 		// prevent reload of webpage when measuring from north to south
 		
         this.helpMessageEl.style.display = 'none';
-		alert(e.xy.x);
+		
+		// use x/y-shift to see the end of the line (normally 'under' your finger)
+		
+		e.xy.x=(e.xy.x-5);
+		e.xy.y=(e.xy.y-5);
+		
 		var touchpoint=map.getLonLatFromLayerPx(e.xy);
 		
 		//console.log(touchpoint);
