@@ -37,7 +37,11 @@ function init() {
 		
 		]
     });
-map.events.register("dblclick", map, function(){alert("scheidde");});
+/*
+map.events.register("dblclick", map, function(){
+	alert("dblclick");}
+	);
+	*/
     var pointSymbolizer = {
         pointRadius: 4,
         graphicName: "square",
